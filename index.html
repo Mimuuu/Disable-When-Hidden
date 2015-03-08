@@ -1,0 +1,48 @@
+<html>
+<head>
+	<title>Disable When Hidden Example</title>
+
+
+	<style>
+	.item {
+		width: 100%;
+		height: 200px;
+		background-color: #F2D888;
+		margin: 10px 0;
+	}
+
+	.button {
+		position: fixed;
+		width: 200px;
+		height: 50px;
+		top: 0;
+		right: 0;
+	}
+
+	</style>
+
+
+</head>
+
+<body ng-app='app'>
+
+	<div ng-controller='listCtrl as list'>
+
+		<button class='button' ng-click='list.countWatchers()'>Console.log watchers</button>
+
+		<div disable-when-hidden>
+		<div ng-repeat="item in list.array" class="item" dwh-element>
+                <p ng-bind='item.title'></p>
+            </div>
+		</div>
+	</div>
+
+	<!-- JS files -->
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	<script src="example/main.js"></script>
+	<script src="src/disableWhenHidden.js"></script>
+
+</body>
+
+
+</html>
