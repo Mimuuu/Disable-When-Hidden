@@ -19,8 +19,3 @@ I'll copy the basic example to explain better, here is a simple `ngRepeat`:
 </div>
 ```
 `DisableWhenHidden`registers a listener to a scroll event on the document, that will broadcast an event to alert every `dwhElement` to either disable watchers, re-enable them or do nothing.
-
-**Note:**
-I don't really like to make a whole module to this, or add 10,000 parameters to make it super-generic, so I encourage you to edit it and put what suits you best. 
-
-Edit the module name, put your own debounce function that you probably have already, put your ideal margin of error (1000px by default), etc.
